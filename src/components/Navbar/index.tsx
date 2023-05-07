@@ -6,6 +6,7 @@ import Icon from "../Icon";
 import Button from "../Button";
 import Image from "next/image";
 import Logo from "../../assets/letter-m.png"
+import Link from "next/link";
 
 interface NavbarProps { 
     
@@ -13,7 +14,7 @@ interface NavbarProps {
 
 const Navbar:React.FC<NavbarProps> = () => {
   return (
-    <header className="header-nav fixed top-0 w-full backdrop-filter backdrop-blur-lg bg-opacity-70">
+    <header className="header-nav fixed top-0 w-full backdrop-filter backdrop-blur-lg bg-opacity-70 z-50">
       <nav className="flex flex-row justify-between max-w-7xl mx-auto py-2 px-4 sm:px-6 lg:px-8 bg-opacity-50">
         <div className="logo flex items-center hover:bg-primary-bg rounded-full p-1 cursor-pointer" >
           <Image src={Logo} width={36} height={36} alt="Portfolio logo"/>
@@ -27,7 +28,10 @@ const Navbar:React.FC<NavbarProps> = () => {
         <div className="nav-right flex flex-row items-center gap-2 text-xl text-second-font">
           <Icon icon={BiMenuAltRight} className="block md:hidden" />
           <Icon icon={BiMoon} />
-          <Icon icon={AiFillGithub} />
+          <Link href="https://github.com/M4NCHU">
+            <Icon icon={AiFillGithub} />
+          </Link>
+          
           <Button size="small" variant="primary" addClass="text-sm flex gap-2 ml-2">
             <p className="m-0"><span className="md:inline-block hidden">Download</span>  CV</p> 
             <AiOutlineDownload/>

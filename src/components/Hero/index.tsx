@@ -17,7 +17,7 @@ const Hero:React.FC<HeroProps> = () => {
     const date = current.getFullYear()
 
   return (
-      <section className="hero flex md:flex-row flex-col justify-center items-center text-primary-font mt-24">
+      <section className="hero flex md:flex-row flex-col justify-center items-center text-primary-font mt-4 md:-mt-8 min-h-screen">
         <div className="hero-left px-1 md:px-4">
             <div className="hero-title">
                 <p className="text-blue-500">Welcome to my profile</p>

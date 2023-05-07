@@ -12,7 +12,7 @@ import { DiCss3, DiJava, DiJavascript, DiLinux } from "react-icons/di";
 import { TbBrandNextjs, TbBrandTypescript } from "react-icons/tb";
 import { FaNodeJs, FaPhp, FaPython, FaReact } from "react-icons/fa";
 import { SiMysql, SiTailwindcss } from "react-icons/si";
-import { BsFiletypeScss } from "react-icons/bs";
+import { BsFiletypeScss, BsWordpress } from "react-icons/bs";
 
 
 interface SkillsProps { 
@@ -21,13 +21,7 @@ interface SkillsProps {
 
 const Skills:React.FC<SkillsProps> = () => {
   return (
-    <div className="mt-16">
-        <Head text="My skills">
-            <a href="" className="flex flex-row items-center gap-2 hover:text-second-font">
-                All skills
-                <AiOutlineArrowRight/>
-            </a>
-        </Head>
+    
 
         <div className="skills flex flex-row justify-center items-center gap-4 text-lg flex-wrap mb-8">
             <Skill title="JavaScript" icon={<DiJavascript/>}/>
@@ -41,10 +35,11 @@ const Skills:React.FC<SkillsProps> = () => {
             <Skill title="Git" icon={<BiGitBranch/>}/>
             <Skill title="Tailwind" icon={<SiTailwindcss/>}/>
             <Skill title="PHP" icon={<FaPhp/>}/>
-            <Skill title="SCSS" icon={<BsFiletypeScss/>}/>
+            {/* <Skill title="SCSS" icon={<BsFiletypeScss/>}/> */}
             <Skill title="Python" icon={<FaPython/>}/>
+            <Skill title="WordPress" icon={<BsWordpress/>}/>
         </div>
-    </div>
+    
     
   );
 };
